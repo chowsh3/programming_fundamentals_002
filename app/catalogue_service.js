@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-const catalogue = [
+const catalogue= [
   "The Catcher in the Rye by J.D. Salinger",
   "Dracula by Bram Stoker",
   "Between the Assassinations by Aravind Adiga",
@@ -22,24 +22,50 @@ const catalogue = [
   "The Origin of Species by Charles Darwin"
 ];
 
-function countBooks() {
-  // Your code here
+function countBooks(){
+return catalogue.length;
 }
+
 
 function checkBook(book) {
-  // Your code here
+for(let i =0; i<catalogue.length; i++){
+if (book === catalogue[i]) {
+  return true;
 }
+} return false;
+}
+
 
 function countBooksByFirstLetter(letter) {
-  // Your code here
+let n=0; 
+for(let i=0; i<catalogue.length; i++){
+  if(catalogue[i].startsWith(letter)){
+    n+=1;
+  }
+}return n
 }
 
-function countBooksByKeyword(keyword) {
   // Your code here
+
+
+function countBooksByKeyword(keyword) {
+  let n = 0;
+  for(let i=0; i<catalogue.length; i++){
+    if(catalogue[i].includes(keyword)){
+      n+=1;
+    }
+  }
+  return n;
 }
 
 function getBooksByAuthor(author) {
-  // Your code here
+  let arrayofAuthors = [];
+  for(let i=0; i<catalogue.length; i++){
+    if(catalogue[i].includes(author)){
+      arrayofAuthors.push(catalogue[i]);
+    }
+  }
+  return arrayofAuthors;
 }
 
 module.exports = {
