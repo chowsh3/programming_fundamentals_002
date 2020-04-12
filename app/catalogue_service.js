@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-const catalogue= [
+const catalogue = [
   "The Catcher in the Rye by J.D. Salinger",
   "Dracula by Bram Stoker",
   "Between the Assassinations by Aravind Adiga",
@@ -22,37 +22,37 @@ const catalogue= [
   "The Origin of Species by Charles Darwin"
 ];
 
-function countBooks(){
-return catalogue.length;
+function countBooks() {
+  return catalogue.length;
 }
 
 
 function checkBook(book) {
-for(let i =0; i<catalogue.length; i++){
-if (book === catalogue[i]) {
-  return true;
-}
-} return false;
+  for (let i = 0; i < catalogue.length; i++) {
+    if (book === catalogue[i]) {
+      return true;
+    }
+  } return false;
 }
 
 
 function countBooksByFirstLetter(letter) {
-let n=0; 
-for(let i=0; i<catalogue.length; i++){
-  if(catalogue[i].startsWith(letter)){
-    n+=1;
-  }
-}return n
+  let n = 0;
+  for (let i = 0; i < catalogue.length; i++) {
+    if (catalogue[i].startsWith(letter)) {
+      n += 1;
+    }
+  } return n
 }
 
-  // Your code here
+// Your code here
 
 
 function countBooksByKeyword(keyword) {
   let n = 0;
-  for(let i=0; i<catalogue.length; i++){
-    if(catalogue[i].includes(keyword)){
-      n+=1;
+  for (let i = 0; i < catalogue.length; i++) {
+    if (catalogue[i].includes(keyword)) {
+      n += 1;
     }
   }
   return n;
@@ -60,8 +60,8 @@ function countBooksByKeyword(keyword) {
 
 function getBooksByAuthor(author) {
   let arrayofAuthors = [];
-  for(let i=0; i<catalogue.length; i++){
-    if(catalogue[i].includes(author)){
+  for (let i = 0; i < catalogue.length; i++) {
+    if (catalogue[i].includes(author)) {
       arrayofAuthors.push(catalogue[i]);
     }
   }
